@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Encyclopedia of Questionable Advice - Get the worst advice you've never asked for!">
+    <meta name="keywords" content="questionable advice, random advice, worst advice, humor">
+    <meta name="author" content="Your Name">
+    <title>The Encyclopedia of Questionable Advice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>The Encyclopedia of Questionable Advice</h1>
+    <p>Press the button below to receive a piece of advice so bad, you'll wonder how it even exists.</p>
+    <div id="advice-container">
+        <p id="advice-text">"Press the button for some truly terrible advice."</p>
+    </div>
+    <button id="generate-advice">Get Advice</button>
+    <p><a href="index.html">Back to Homepage</a></p>
+
+    <script>
+        const adviceList = [
+            "Always smell your leap card to know if it's yours.",
+            "Potato waffles, always.",
+            "NEVER MAKE A CHEESECAKE.",
+            "Keep your parents close, but their debit cards closer.",
+            "If the shoe fits, buy it in every color.",
+            "Never trust a ladder. They’re always up to something.",
+            "Store all your passwords in a Word document titled 'Definitely Not Passwords'.",
+            "Call every dog you meet 'Steve' to assert dominance.",
+            "Talk to your plants; ignore your coworkers.",
+            "Always carry a spare pair of pants. You never know."
+        ];
+
+        const generateAdvice = () => {
+            const advice = adviceList[Math.floor(Math.random() * adviceList.length)];
+            document.getElementById("advice-text").textContent = `"${advice}"`;
+        };
+
+        document.getElementById("generate-advice").addEventListener("click", generateAdvice);
+    </script>
+</body>
+</html>

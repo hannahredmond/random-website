@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Bureau of Made-Up Facts - Discover completely fabricated facts for a laugh!">
+    <meta name="keywords" content="made-up facts, random facts, humor, nonsense">
+    <meta name="author" content="Your Name">
+    <title>The Bureau of Made-Up Facts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>The Bureau of Made-Up Facts</h1>
+    <p>Click the button below to learn a "fact" that absolutely isn’t true, but is guaranteed to make you smile.</p>
+    <div id="fact-container">
+        <p id="fact-text">"Press the button to reveal a totally real and definitely not made-up fact."</p>
+    </div>
+    <button id="generate-fact">Get a Fact</button>
+    <p><a href="index.html">Back to Homepage</a></p>
+
+    <script>
+        const factList = [
+            "Octopuses invented yoga.",
+            "Bananas are naturally magnetic.",
+            "If you whisper to a potato, it grows faster.",
+            "Pigeons know how to play chess but prefer checkers.",
+            "The moon is 80% cheese and 20% imagination.",
+            "Carrots can sing, but only in private.",
+            "Waffles are just pancakes that went to therapy."
+        ];
+
+        const generateFact = () => {
+            const fact = factList[Math.floor(Math.random() * factList.length)];
+            document.getElementById("fact-text").textContent = `"${fact}"`;
+        };
+
+        document.getElementById("generate-fact").addEventListener("click", generateFact);
+    </script>
+</body>
+</html>
